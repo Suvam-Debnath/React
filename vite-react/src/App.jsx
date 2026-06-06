@@ -1,20 +1,53 @@
-// 1. you can embed any valid java script expresson inside curly braces {} in jsx.
-// 2. jsx attribute use camelcase syntax.
 
+function WelcomeMessage(name){
+  return <h1>Hello, {name} </h1>
+}
+
+function Greeting(isMorning){
+  if(isMorning){
+    return <h1>Good Morning</h1>
+  }
+  else{
+    return <h1>Good Evening</h1>
+  }
+}
+
+function AlertBox(message){
+  return <div className='alert'>{message}</div>
+}
+
+function showAlert(condition, message){
+  if(condition){
+    return AlertBox(message);
+  }
+  else{
+    return null;
+  }
+}
 
 function App() {
-   const isLoggedin = true;
-  // if (isLoggedin) {
-  //   return <h1>Welcome to React</h1>
-  // }
-  // return <h1>Please login to continue</h1>
 
-  const element = <h1>
-  {isLoggedin ? 'Welcome to React' : 'Please login to continue'}
-  </h1>
+  // this is single line comment 
+  /*
+  This is multi line comment
+  */
+
+const now = new Date();
+const isMorning = now.getHours() < 12;
+
   return(
     <div>
-      {element}
+      {/* // this is single line commment inside jsx */}
+      {/* 
+        this is multiline comment inside jsx
+       */}
+      {WelcomeMessage("suvam")}
+      {WelcomeMessage("Alice")}
+      {WelcomeMessage("Bobby")}
+
+      {Greeting(isMorning)}
+
+      {showAlert(true, "This is an alert message!")}
     </div>
   )
 }
