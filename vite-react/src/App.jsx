@@ -3,10 +3,30 @@ import MyButton from './MyButton';
 import ProfileCard from './ProfileCard';
 
 function App() {
+
   const person = {
     name : "John Doe",
     age : 23,
     isMember : true
+  };
+
+  // setting up callback function for handling click event on hobbies
+  const HandleHobbyClick = (hobby) => {
+    alert(`You clicked on ${hobby}`);
+  };
+
+  const aliceProfile = {
+    name : "Alice Smith",
+    age : 30,
+    isMember : false,
+    hobbies : ["Cooking", "Traveling", "Painting"]
+  };
+
+  const SuvamProfile = {
+    name : "Suvam Debnath",
+    age : 25,
+    isMember : true,
+    hobbies : ["Reading", "Swimming", "Gaming"]
   };
 
   // --without destructureing, using dot notation--
@@ -21,8 +41,8 @@ function App() {
     <div>
       <h1>Hello react</h1>
       <MyButton />
-      <ProfileCard name="John Doe" age={23} isMember = {true} />
-      <ProfileCard name="Suvam Debnath" age={25} isMember = {false}/>
+      <ProfileCard {...aliceProfile} onHobbyClick={HandleHobbyClick}/>
+      <ProfileCard {...SuvamProfile} onHobbyClick={HandleHobbyClick}/>
     </div>
   );
 }
