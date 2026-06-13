@@ -1,0 +1,75 @@
+/* Full Page */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.app-container {
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+  border: 3px solid #2196f3;
+  border-radius: 20px;
+  padding: 35px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.2);
+}
+
+/* Heading */
+.app-container h1 {
+  color: #1565c0;
+  margin-bottom: 20px;
+}
+
+/* Counter Text */
+.app-container p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+/* Input */
+.app-container input {
+  width: 80px;
+  padding: 10px;
+  margin: 15px 0;
+  border: 2px solid #64b5f6;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+
+.app-container input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
+}
+
+/* Buttons */
+.app-container button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.app-container button:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+}
+
+.app-container button:active {
+  transform: scale(0.96);
+}
