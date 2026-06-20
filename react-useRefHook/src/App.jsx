@@ -16,8 +16,29 @@ function App() {
     refCounter.current += 1;
   }
 
+  // Example: Focusing an input element using useRef
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    inputRef.current.focus();
+    inputRef.current.style.backgroundColor = 'yellow'; // Change background color to indicate focus
+
+  }
+  const resetFocus = () => {
+    inputRef.current.blur();
+    inputRef.current.style.backgroundColor = ''; // Reset background color
+  }
+  
   return (
     <div className="App">
+      <input ref={inputRef} type="text" />
+      <button onClick={handleFocus}>Focus Input</button>
+      <button onClick={resetFocus}>Reset Focus</button>
+
+
+
+
+      {/* Example: Using useRef to store a mutable value that does not trigger re-renders */}
       <p>State Counter: {stateCounter}</p>
       <button onClick={() => incrementStateCounter()}>Increment State Counter</button>
       <p>Ref Counter: {refCounter.current}</p>
