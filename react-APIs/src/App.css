@@ -1,0 +1,49 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-3px);
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #007bff;
+  text-transform: capitalize;
+}
+
+p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
