@@ -10,12 +10,16 @@ function App() {
 
   useEffect(()=>{
     setLoading(true);
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => {
-        setData(response.data)
+    axios.all([
+      axios.get('https://jsonplaceholder.typicode.com/posts'),
+      axios.get('https://jsonplaceholder.typicode.com/users')
+    ])
+      .then(axios.spread((posts , users) => {
+        console.log(posts);
+        setData(posts.data);
         setLoading(false);
         //throw new Error('Something went wrong');
-      })
+      }))
       .catch((error) => {
           console.log('Error fetching data: ', error);
           setError('Failed to set data');
